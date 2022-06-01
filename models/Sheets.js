@@ -16,3 +16,5 @@ class Sheets {
 }
 
 Sheets.data().then(a => console.log(a.properties.title))
+
+module.exports = Sheets;

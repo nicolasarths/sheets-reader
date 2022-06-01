@@ -1,13 +1,18 @@
-const models = require('../models')
+const { Sheets, Cells } = require ('../models')
+const { spreadsheetId } = require ('../config')
 // {}
 
 describe('Connecting to google sheets', () => {
-    test('Succesfully connects a spreadsheet', async () => {
-      const googleSheets = await models()
-      let isConnected = false
-      if (googleSheets.spreadsheets) {
-        isSpreadsheets = true
-      }
-      expect(isSpreadsheets).toEqual(true)
-    })
+  test('Variable spreadsheet ID succesfully defined', () => {
+    expect(typeof(spreadsheetId)).toBe('string')
   })
+
+  test('Succesfully connects to a spreadsheet', async () => {
+    const data = await Sheets.data()
+    let isConnected = false
+    if (data.properties.title) {
+      isSpreadsheets = true
+    }
+    expect(isSpreadsheets).toBeTruthy()
+  })
+})
