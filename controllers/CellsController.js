@@ -1,0 +1,2 @@
+const { Cells } = require ('../models')
+
