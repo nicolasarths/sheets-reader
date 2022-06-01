@@ -1,14 +1,15 @@
 const { google } = require('googleapis')
 
-//You need the spreadsheet ID to access it. I hid mine just because. 
+//A spreadsheet ID is required to access said spreadsheet. I hid mine just because. 
 const spreadsheetId = require('../secret/spreadsheetId')
 
-//Reaching the credentials file and creating an authorization
+//Reach the credentials file and create an authorization
 const auth = new google.auth.GoogleAuth({
     keyFile:"credentials.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets"
 });
 
+//We then return the access to the API so that it can be used in other files.
 const googleSheetsAPI = async () => {
     //Creating client instance for authorization
     const client = await auth.getClient;
