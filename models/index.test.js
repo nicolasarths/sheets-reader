@@ -1,4 +1,4 @@
-const { Sheets, Cells } = require ('../models')
+const Sheets = require ('.')
 const { spreadsheetId } = require ('../config')
 
 describe('Connecting to google sheets', () => {
