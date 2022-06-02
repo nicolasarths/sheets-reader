@@ -1,10 +1,10 @@
 const { Router } = require('express')
-const SheetsController = require('../controllers/SheetsController')
+const { SheetsController } = require('../controllers/')
 
 const router = Router()
 
 router
-  .get('/sheets', SheetsController.readSheets)
-  .get('/cells', SheetsController.readCells)
+  .get('/spreadsheet', SheetsController.readData)
+  .get('/spreadsheet/meta', SheetsController.readMetaData)
 
 module.exports = router
