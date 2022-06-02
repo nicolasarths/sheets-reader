@@ -8,7 +8,7 @@ describe("Check method \'readData\' ", () => {
         expect(typeof(dataProof)).toBe('string')
     })
     
-    test('should 200 and return correct value', async () => {
+    test('readData returns status 200', async () => {
         let req = mockRequest();
         req.params.id = 1;
         const res = mockResponse();
