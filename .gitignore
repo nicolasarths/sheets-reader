@@ -1,3 +1,3 @@
 node_modules/
-credentials.json
-secret/
+api/credentials.json
+api/spreadsheetId
